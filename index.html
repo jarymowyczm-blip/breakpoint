@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0c10" />
+    <meta
+      name="description"
+      content="BREACHPOINT - a browser-based first person shooter with authoritative multiplayer, AI bots, campaign missions and a practice range."
+    />
+    <title>BREACHPOINT</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body,
+      #root {
+        height: 100%;
+        margin: 0;
+        background: #0a0c10;
+      }
+      body {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+        color: #d7dee8;
+        overflow: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      #boot {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-content: center;
+        gap: 18px;
+        text-align: center;
+        background: radial-gradient(circle at 50% 40%, #16202c 0%, #07090d 70%);
+        z-index: 9999;
+        transition: opacity 0.4s ease;
+      }
+      #boot h1 {
+        margin: 0;
+        font-size: clamp(28px, 6vw, 56px);
+        letter-spacing: 0.35em;
+        font-weight: 700;
+        text-indent: 0.35em;
+        color: #eef3f9;
+      }
+      #boot p {
+        margin: 0;
+        font-size: 12px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #6f7f92;
+      }
+      #boot .bar {
+        width: 240px;
+        height: 3px;
+        margin: 0 auto;
+        background: #1d2733;
+        overflow: hidden;
+      }
+      #boot .bar i {
+        display: block;
+        width: 40%;
+        height: 100%;
+        background: linear-gradient(90deg, #ff8a3d, #ffd166);
+        animation: slide 1.1s ease-in-out infinite;
+      }
+      @keyframes slide {
+        0% {
+          transform: translateX(-110%);
+        }
+        100% {
+          transform: translateX(280%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="boot">
+      <h1>BREACHPOINT</h1>
+      <div class="bar"><i></i></div>
+      <p>Loading tactical systems</p>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -8,7 +8,7 @@ import react from '@vitejs/plugin-react';
 const GAME_SERVER = process.env.GAME_SERVER_URL || 'http://localhost:8080';
 
 export default defineConfig({
-  base: './',
+  base: '/breakpoint/',
   plugins: [react()],
   server: {
     port: 5173,
